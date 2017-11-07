@@ -50,7 +50,7 @@ public class CadastroActivity extends AppCompatActivity {
         });
         btnSign.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
                 String txtEmail= email.getText().toString().trim();
                 String txtSenha= senha.getText().toString().trim();
             if (TextUtils.isEmpty(txtEmail)){
@@ -73,13 +73,29 @@ public class CadastroActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Toast.makeText(CadastroActivity.this,"createUserWithEmail:onComplete:"+task.isSuccessful(),Toast.LENGTH_SHORT).show();
                     pb.setVisibility(View.GONE);
+
+                        if(!task.isSuccessful()){
+                            Toast.makeText(CadastroActivity.this,"Falha na autenticação"+task.getException(),Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent intencao = new Intent(CadastroActivity.this,MainActivity.class);
+                            startActivity(intencao);
+                            finish();
+                        }
                     }
+
                 });
 
 
             }
         });
 
+       /* @Override
+        protected void onResume(){
+            super.onResume();
+            pb.setVisibility(view.GONE);
+
+        }*/
+        }
 
     }
-}
+
