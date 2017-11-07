@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "186808710640",
+    "firebase_url": "https://devproject-b7e10.firebaseio.com",
+    "project_id": "devproject-b7e10",
+    "storage_bucket": "devproject-b7e10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186808710640:android:6229d891d67d3449",
+        "android_client_info": {
+          "package_name": "com.example.bruno.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186808710640-ffft1o1eko30jmctjp3jdeavi5fesn51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpWYFSmN3lYt0m-XVQ8fUp6Jg4siix90k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
